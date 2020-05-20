@@ -1,0 +1,14 @@
+*.user
+*.obj
+*.db
+*.opendb
+*.tlog
+*.pdb
+*.log
+*.svn
+*.vs
+*.exe
+*.ilk
+*.log
+*.idb
+glfw3.lib
