@@ -19,8 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{95A0DCC3-F27A-34B7-B976-5069676028A5}</ProjectGuid>
-    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <ProjectGuid>{5B3BAD01-7D5C-3994-947B-884D21B7857B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>title</ProjectName>
@@ -56,25 +55,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\build\tests\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\build\tests\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">title.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">title</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\build\tests\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\build\tests\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">title.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">title</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\build\tests\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\build\tests\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">title.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">title</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\build\tests\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\build\tests\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">title.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">title</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
@@ -83,7 +82,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\deps;C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\deps;C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsC</CompileAs>
@@ -100,10 +99,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\deps;C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\deps;C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\deps;C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\deps;C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -117,8 +116,8 @@
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/admin/Desktop/openglLearn/glfw-3.3.2/build/tests/Debug/title.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/admin/Desktop/openglLearn/glfw-3.3.2/build/tests/Debug/title.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2/build/tests/Debug/title.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2/build/tests/Debug/title.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
     </Link>
     <ProjectReference>
@@ -127,7 +126,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\deps;C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\deps;C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <ExceptionHandling>
@@ -144,10 +143,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\deps;C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\deps;C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\deps;C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\deps;C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -161,8 +160,8 @@
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/admin/Desktop/openglLearn/glfw-3.3.2/build/tests/Release/title.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/admin/Desktop/openglLearn/glfw-3.3.2/build/tests/Release/title.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2/build/tests/Release/title.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2/build/tests/Release/title.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
     </Link>
     <ProjectReference>
@@ -171,7 +170,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\deps;C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\deps;C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <ExceptionHandling>
@@ -188,10 +187,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\deps;C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\deps;C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\deps;C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\deps;C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -205,8 +204,8 @@
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/admin/Desktop/openglLearn/glfw-3.3.2/build/tests/MinSizeRel/title.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/admin/Desktop/openglLearn/glfw-3.3.2/build/tests/MinSizeRel/title.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2/build/tests/MinSizeRel/title.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2/build/tests/MinSizeRel/title.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
     </Link>
     <ProjectReference>
@@ -215,7 +214,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\deps;C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\deps;C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -231,10 +230,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\deps;C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\deps;C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\deps;C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\deps;C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -248,8 +247,8 @@
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/admin/Desktop/openglLearn/glfw-3.3.2/build/tests/RelWithDebInfo/title.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/admin/Desktop/openglLearn/glfw-3.3.2/build/tests/RelWithDebInfo/title.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2/build/tests/RelWithDebInfo/title.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2/build/tests/RelWithDebInfo/title.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
     </Link>
     <ProjectReference>
@@ -257,10 +256,10 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\tests\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/admin/Desktop/openglLearn/glfw-3.3.2/tests/CMakeLists.txt</Message>
+    <CustomBuild Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\tests\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2/tests/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-D:\softwares\Cmake\bin\cmake.exe -SC:/Users/admin/Desktop/openglLearn/glfw-3.3.2 -BC:/Users/admin/Desktop/openglLearn/glfw-3.3.2/build --check-stamp-file C:/Users/admin/Desktop/openglLearn/glfw-3.3.2/build/tests/CMakeFiles/generate.stamp
+E:\softwares\Cmake\bin\cmake.exe -SC:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2 -BC:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2/build --check-stamp-file C:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2/build/tests/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -269,11 +268,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\build\tests\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\build\tests\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/admin/Desktop/openglLearn/glfw-3.3.2/tests/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2/tests/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-D:\softwares\Cmake\bin\cmake.exe -SC:/Users/admin/Desktop/openglLearn/glfw-3.3.2 -BC:/Users/admin/Desktop/openglLearn/glfw-3.3.2/build --check-stamp-file C:/Users/admin/Desktop/openglLearn/glfw-3.3.2/build/tests/CMakeFiles/generate.stamp
+E:\softwares\Cmake\bin\cmake.exe -SC:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2 -BC:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2/build --check-stamp-file C:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2/build/tests/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -282,11 +281,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\build\tests\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\build\tests\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/admin/Desktop/openglLearn/glfw-3.3.2/tests/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2/tests/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-D:\softwares\Cmake\bin\cmake.exe -SC:/Users/admin/Desktop/openglLearn/glfw-3.3.2 -BC:/Users/admin/Desktop/openglLearn/glfw-3.3.2/build --check-stamp-file C:/Users/admin/Desktop/openglLearn/glfw-3.3.2/build/tests/CMakeFiles/generate.stamp
+E:\softwares\Cmake\bin\cmake.exe -SC:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2 -BC:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2/build --check-stamp-file C:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2/build/tests/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -295,11 +294,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\build\tests\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\build\tests\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/admin/Desktop/openglLearn/glfw-3.3.2/tests/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2/tests/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-D:\softwares\Cmake\bin\cmake.exe -SC:/Users/admin/Desktop/openglLearn/glfw-3.3.2 -BC:/Users/admin/Desktop/openglLearn/glfw-3.3.2/build --check-stamp-file C:/Users/admin/Desktop/openglLearn/glfw-3.3.2/build/tests/CMakeFiles/generate.stamp
+E:\softwares\Cmake\bin\cmake.exe -SC:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2 -BC:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2/build --check-stamp-file C:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2/build/tests/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -308,24 +307,24 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\build\tests\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\build\tests\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\tests\title.c" />
-    <ClInclude Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\deps\glad\gl.h" />
-    <ClCompile Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\deps\glad_gl.c" />
+    <ClCompile Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\tests\title.c" />
+    <ClInclude Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\deps\glad\gl.h" />
+    <ClCompile Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\deps\glad_gl.c" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\build\ZERO_CHECK.vcxproj">
-      <Project>{68347AFB-9C8D-36BE-93C8-377BCFAC4441}</Project>
+    <ProjectReference Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\build\ZERO_CHECK.vcxproj">
+      <Project>{C4BB7CB7-62E3-313D-8ED5-E31DDA53EEFB}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\build\src\glfw.vcxproj">
-      <Project>{C8CF2A45-5AB5-32D6-9C6E-943EB22F2450}</Project>
+    <ProjectReference Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\build\src\glfw.vcxproj">
+      <Project>{F58AFFE2-0664-3A79-AE82-8B73B67F79E0}</Project>
       <Name>glfw</Name>
     </ProjectReference>
   </ItemGroup>

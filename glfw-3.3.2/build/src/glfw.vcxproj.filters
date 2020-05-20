@@ -1,93 +1,93 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\src\context.c">
+    <ClCompile Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\src\context.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\src\init.c">
+    <ClCompile Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\src\init.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\src\input.c">
+    <ClCompile Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\src\input.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\src\monitor.c">
+    <ClCompile Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\src\monitor.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\src\vulkan.c">
+    <ClCompile Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\src\vulkan.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\src\window.c">
+    <ClCompile Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\src\window.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\src\win32_init.c">
+    <ClCompile Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\src\win32_init.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\src\win32_joystick.c">
+    <ClCompile Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\src\win32_joystick.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\src\win32_monitor.c">
+    <ClCompile Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\src\win32_monitor.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\src\win32_time.c">
+    <ClCompile Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\src\win32_time.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\src\win32_thread.c">
+    <ClCompile Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\src\win32_thread.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\src\win32_window.c">
+    <ClCompile Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\src\win32_window.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\src\wgl_context.c">
+    <ClCompile Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\src\wgl_context.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\src\egl_context.c">
+    <ClCompile Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\src\egl_context.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\src\osmesa_context.c">
+    <ClCompile Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\src\osmesa_context.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\src\internal.h">
+    <ClInclude Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\src\internal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\src\mappings.h">
+    <ClInclude Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\src\mappings.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\build\src\glfw_config.h">
+    <ClInclude Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\build\src\glfw_config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\include\GLFW\glfw3.h">
+    <ClInclude Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\include\GLFW\glfw3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\include\GLFW\glfw3native.h">
+    <ClInclude Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\include\GLFW\glfw3native.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\src\win32_platform.h">
+    <ClInclude Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\src\win32_platform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\src\win32_joystick.h">
+    <ClInclude Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\src\win32_joystick.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\src\wgl_context.h">
+    <ClInclude Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\src\wgl_context.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\src\egl_context.h">
+    <ClInclude Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\src\egl_context.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\src\osmesa_context.h">
+    <ClInclude Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\src\osmesa_context.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\admin\Desktop\openglLearn\glfw-3.3.2\src\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\hl\Desktop\LearnOpengl\glfw-3.3.2\src\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{387A289B-C62F-3863-9925-AA5C7521892E}</UniqueIdentifier>
+      <UniqueIdentifier>{A4C3C4FB-8F77-389A-8E7E-B790959CE541}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{2CD4CD4F-0618-3E35-9BAF-B3C43743CC8E}</UniqueIdentifier>
+      <UniqueIdentifier>{4BDC6DB6-947E-3A2C-B3BD-E99DF5721D84}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

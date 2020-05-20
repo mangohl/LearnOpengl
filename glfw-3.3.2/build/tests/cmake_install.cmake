@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/admin/Desktop/openglLearn/glfw-3.3.2/tests
+# Install script for directory: C:/Users/hl/Desktop/LearnOpengl/glfw-3.3.2/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
