@@ -122,9 +122,11 @@
   <ItemGroup>
     <ClCompile Include="..\..\include\glad.c" />
     <ClCompile Include="ColorTriangle.cpp" />
+    <ClCompile Include="coordinate_systems_depth.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="texture.cpp" />
+    <ClCompile Include="transformation.cpp" />
     <ClCompile Include="triangle.cpp" />
     <ClCompile Include="window.cpp" />
   </ItemGroup>
