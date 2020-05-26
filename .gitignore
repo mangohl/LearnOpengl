@@ -6,7 +6,7 @@
 *.pdb
 *.log
 *.svn
-*.vs
+./project/OpenglExercise/.vs
 *.exe
 *.ilk
 *.log
