@@ -121,6 +121,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\include\glad.c" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="cameraExercise.cpp" />
     <ClCompile Include="ColorTriangle.cpp" />
     <ClCompile Include="coordinate_systems_depth.cpp" />
     <ClCompile Include="main.cpp" />
@@ -131,6 +133,7 @@
     <ClCompile Include="window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
