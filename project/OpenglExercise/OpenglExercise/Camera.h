@@ -71,7 +71,7 @@ public:
 	// returns the view matrix calculated using Euler Angles and the LookAt Matrix
 	glm::mat4 GetViewMatrix()
 	{
-		return glm::lookAt(Position, -Front, Up);
+		return glm::lookAt(Position, Front, Up);
 	}
 
 	// processes input received from any keyboard-like input system. Accepts input parameter in the form of camera defined ENUM (to abstract it from windowing systems)
@@ -80,8 +80,10 @@ public:
 		//先计算出要移动的距离velocity
 		//由于Front和Right使用保持是单位向量，所有乘上距离后，代表朝这一方向移动的距离
 		//Front.z始终保持负值
+		
 		float velocity = MovementSpeed * deltaTime;
 		if (direction == FORWARD)
+			//摄像机沿着摄像机指向方向移动velocity的距离
 			Position += Front * velocity;
 		if (direction == BACKWARD)
 			//写成Position = Position + (-Front)*velocity容易理解些
@@ -92,18 +94,13 @@ public:
 			Position += Right * velocity;
 		if (direction == UP)
 		{
-			//ProcessMouseMovement(1, 10);
-			float radius = 5.0f;
-			float camX = sin(glfwGetTime()) * radius;
-			float camZ = cos(glfwGetTime()) * radius;
-			//glm::mat4 view;
-
+			//摄像机沿着上轴移动velocity的距离
 			Position += Up * velocity;
 
 		}
 		if (direction == DOWN)
 		{
-			//ProcessMouseMovement(-1, -10);
+			Position -= Up * velocity;
 		}
 	}
 
