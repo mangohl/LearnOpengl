@@ -125,6 +125,7 @@
     <ClCompile Include="cameraExercise.cpp" />
     <ClCompile Include="ColorTriangle.cpp" />
     <ClCompile Include="coordinate_systems_depth.cpp" />
+    <ClCompile Include="lighting-colors.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="texture.cpp" />
