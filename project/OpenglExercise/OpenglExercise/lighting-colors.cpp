@@ -62,6 +62,7 @@ namespace lightingColors
 		glfwSetScrollCallback(window, lightingColors::scroll_callback);
 
 		// tell GLFW to capture our mouse
+		//注释了也没什么影响？
 		glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
 		// glad: load all OpenGL function pointers
@@ -78,11 +79,13 @@ namespace lightingColors
 
 		// build and compile our shader zprogram
 		// ------------------------------------
+		//编译、链接两类着色器
 		Shader lightingShader("1.colors.vs", "1.colors.fs");
-		Shader lightCubeShader("1.light_cube.vs", "1.light_cube.fs");
+		Shader lightCubeShader("1.colors.vs", "1.light_cube.fs");
 
 		// set up vertex data (and buffer(s)) and configure vertex attributes
 		// ------------------------------------------------------------------
+		//一份顶点供两个正方体使用
 		float vertices[] = {
 			-0.5f, -0.5f, -0.5f,
 			0.5f, -0.5f, -0.5f,
@@ -128,28 +131,38 @@ namespace lightingColors
 		};
 		// first, configure the cube's VAO (and VBO)
 		unsigned int VBO, cubeVAO;
+		//先生成一个VAO
 		glGenVertexArrays(1, &cubeVAO);
+		//生产一个顶点缓冲对象
 		glGenBuffers(1, &VBO);
-
+		//绑定顶点缓冲对象类型
 		glBindBuffer(GL_ARRAY_BUFFER, VBO);
+		//绑定顶点缓冲对象数据
 		glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
+		//绑定到顶点数组对象
 		glBindVertexArray(cubeVAO);
 
 		// position attribute
+		//声明顶点位置属性 让着色器能够访问到
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 		glEnableVertexAttribArray(0);
 
+
 		// second, configure the light's VAO (VBO stays the same; the vertices are the same for the light object which is also a 3D cube)
+		//设置光照顶点数组对象
+		//因为使用同一份顶点缓冲对象，所以不再需要glGenBuffers生成一个顶点缓冲对象，也不需要glBufferData绑定实际数据
 		unsigned int lightCubeVAO;
 		glGenVertexArrays(1, &lightCubeVAO);
+		//但仍要指定绑定到的顶点数组对象
 		glBindVertexArray(lightCubeVAO);
 
 		// we only need to bind to the VBO (to link it with glVertexAttribPointer), no need to fill it; the VBO's data already contains all we need (it's already bound, but we do it again for educational purposes)
+		//这个注释掉也没什么影响
 		glBindBuffer(GL_ARRAY_BUFFER, VBO);
-
-		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-		glEnableVertexAttribArray(0);
+		
+		//
+		//glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+		//glEnableVertexAttribArray(0);
 
 
 		// render loop
