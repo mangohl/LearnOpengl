@@ -4,18 +4,16 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-
 #include "Shader.h"
 #include "Camera.h"
 
+
 #include <iostream>
-namespace lightingColors
-{
+namespace basic_lighting_specular {
 	void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 	void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 	void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 	void processInput(GLFWwindow *window);
-
 
 	// settings
 	const unsigned int SCR_WIDTH = 800;
@@ -31,10 +29,10 @@ namespace lightingColors
 	float deltaTime = 0.0f;
 	float lastFrame = 0.0f;
 
-	// lighting
-	glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
+	// lighting 光源立方体中心位置
+	glm::vec3 lightPos(0.0f, 0.0f, 2.0f);
 
-	int lightingColorsProcess()
+	int main()
 	{
 		// glfw: initialize and configure
 		// ------------------------------
@@ -57,12 +55,11 @@ namespace lightingColors
 			return -1;
 		}
 		glfwMakeContextCurrent(window);
-		glfwSetFramebufferSizeCallback(window, lightingColors::framebuffer_size_callback);
-		glfwSetCursorPosCallback(window, lightingColors::mouse_callback);
-		glfwSetScrollCallback(window, lightingColors::scroll_callback);
+		glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+		glfwSetCursorPosCallback(window, mouse_callback);
+		glfwSetScrollCallback(window, scroll_callback);
 
 		// tell GLFW to capture our mouse
-		//注释了也没什么影响？
 		glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
 		// glad: load all OpenGL function pointers
@@ -79,89 +76,81 @@ namespace lightingColors
 
 		// build and compile our shader zprogram
 		// ------------------------------------
-		//编译、链接两类着色器
-		Shader lightingShader("1.colors.vs", "1.colors.fs");
-		Shader lightCubeShader("1.light_cube.vs", "1.light_cube.fs");
+		Shader lightingShader("2.2.basic_lighting.vs", "2.2.basic_lighting.fs");
+		Shader lightCubeShader("2.2.light_cube.vs", "2.2.light_cube.fs");
 
 		// set up vertex data (and buffer(s)) and configure vertex attributes
 		// ------------------------------------------------------------------
-		//一份顶点供两个正方体使用
+		//后面三个代表对应面的法向量
 		float vertices[] = {
-			-0.5f, -0.5f, -0.5f,
-			0.5f, -0.5f, -0.5f,
-			0.5f,  0.5f, -0.5f,
-			0.5f,  0.5f, -0.5f,
-			-0.5f,  0.5f, -0.5f,
-			-0.5f, -0.5f, -0.5f,
+			-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+			 0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+			 0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+			 0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+			-0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+			-0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
 
-			-0.5f, -0.5f,  0.5f,
-			0.5f, -0.5f,  0.5f,
-			0.5f,  0.5f,  0.5f,
-			0.5f,  0.5f,  0.5f,
-			-0.5f,  0.5f,  0.5f,
-			-0.5f, -0.5f,  0.5f,
+			-0.5f, -0.5f,  0.5f,  0.0f,  0.0f,  1.0f,
+			 0.5f, -0.5f,  0.5f,  0.0f,  0.0f,  1.0f,
+			 0.5f,  0.5f,  0.5f,  0.0f,  0.0f,  1.0f,
+			 0.5f,  0.5f,  0.5f,  0.0f,  0.0f,  1.0f,
+			-0.5f,  0.5f,  0.5f,  0.0f,  0.0f,  1.0f,
+			-0.5f, -0.5f,  0.5f,  0.0f,  0.0f,  1.0f,
 
-			-0.5f,  0.5f,  0.5f,
-			-0.5f,  0.5f, -0.5f,
-			-0.5f, -0.5f, -0.5f,
-			-0.5f, -0.5f, -0.5f,
-			-0.5f, -0.5f,  0.5f,
-			-0.5f,  0.5f,  0.5f,
+			-0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+			-0.5f,  0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+			-0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+			-0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+			-0.5f, -0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+			-0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
 
-			0.5f,  0.5f,  0.5f,
-			0.5f,  0.5f, -0.5f,
-			0.5f, -0.5f, -0.5f,
-			0.5f, -0.5f, -0.5f,
-			0.5f, -0.5f,  0.5f,
-			0.5f,  0.5f,  0.5f,
+			 0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
+			 0.5f,  0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+			 0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+			 0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
+			 0.5f, -0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
+			 0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
 
-			-0.5f, -0.5f, -0.5f,
-			0.5f, -0.5f, -0.5f,
-			0.5f, -0.5f,  0.5f,
-			0.5f, -0.5f,  0.5f,
-			-0.5f, -0.5f,  0.5f,
-			-0.5f, -0.5f, -0.5f,
+			-0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
+			 0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
+			 0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+			 0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+			-0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
+			-0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
 
-			-0.5f,  0.5f, -0.5f,
-			0.5f,  0.5f, -0.5f,
-			0.5f,  0.5f,  0.5f,
-			0.5f,  0.5f,  0.5f,
-			-0.5f,  0.5f,  0.5f,
-			-0.5f,  0.5f, -0.5f,
+			-0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,
+			 0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,
+			 0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+			 0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+			-0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+			-0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f
 		};
 		// first, configure the cube's VAO (and VBO)
 		unsigned int VBO, cubeVAO;
-		//先生成一个VAO
 		glGenVertexArrays(1, &cubeVAO);
-		//生产一个顶点缓冲对象
 		glGenBuffers(1, &VBO);
-		//绑定顶点缓冲对象类型
+
 		glBindBuffer(GL_ARRAY_BUFFER, VBO);
-		//绑定顶点缓冲对象数据
 		glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-		//绑定到顶点数组对象
+
 		glBindVertexArray(cubeVAO);
 
 		// position attribute
-		//声明顶点位置属性 让立方体顶点着色器能够访问到
-		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
 		glEnableVertexAttribArray(0);
+		// normal attribute
+		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+		glEnableVertexAttribArray(1);
 
 
 		// second, configure the light's VAO (VBO stays the same; the vertices are the same for the light object which is also a 3D cube)
-		//设置光照顶点数组对象
-		//因为使用同一份顶点缓冲对象，所以不再需要glGenBuffers生成一个顶点缓冲对象，也不需要glBufferData绑定实际数据
 		unsigned int lightCubeVAO;
 		glGenVertexArrays(1, &lightCubeVAO);
-		//但仍要指定绑定到的顶点数组对象
 		glBindVertexArray(lightCubeVAO);
 
-		// we only need to bind to the VBO (to link it with glVertexAttribPointer), no need to fill it; the VBO's data already contains all we need (it's already bound, but we do it again for educational purposes)
-		//这个注释掉也没什么影响
 		glBindBuffer(GL_ARRAY_BUFFER, VBO);
-		
-		//给光照立方体指定位置属性，让光照顶点着色器能够访问到
-		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+		// note that we update the lamp's position attribute's stride to reflect the updated buffer data
+		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
 		glEnableVertexAttribArray(0);
 
 
@@ -177,7 +166,7 @@ namespace lightingColors
 
 			// input
 			// -----
-			lightingColors::processInput(window);
+			processInput(window);
 
 			// render
 			// ------
@@ -185,13 +174,14 @@ namespace lightingColors
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 			// be sure to activate shader when setting uniforms/drawing objects
-			//在设置uniform变量之前要先激活着色器程序
+			//设置立方体本身颜色、光源立方体颜色、光源立方体位置、摄像机位置
 			lightingShader.use();
 			lightingShader.setVec3("objectColor", 1.0f, 0.5f, 0.31f);
 			lightingShader.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
+			lightingShader.setVec3("lightPos", lightPos);
+			lightingShader.setVec3("viewPos", camera.Position);
 
 			// view/projection transformations
-			//设置模型、观察、投影矩阵
 			glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
 			glm::mat4 view = camera.GetViewMatrix();
 			lightingShader.setMat4("projection", projection);
@@ -202,7 +192,6 @@ namespace lightingColors
 			lightingShader.setMat4("model", model);
 
 			// render the cube
-			//渲染立方体
 			glBindVertexArray(cubeVAO);
 			glDrawArrays(GL_TRIANGLES, 0, 36);
 
@@ -215,7 +204,7 @@ namespace lightingColors
 			model = glm::translate(model, lightPos);
 			model = glm::scale(model, glm::vec3(0.2f)); // a smaller cube
 			lightCubeShader.setMat4("model", model);
-			//渲染光照立方体
+
 			glBindVertexArray(lightCubeVAO);
 			glDrawArrays(GL_TRIANGLES, 0, 36);
 
@@ -257,7 +246,6 @@ namespace lightingColors
 			camera.ProcessKeyboard(UP, deltaTime);
 		if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS)
 			camera.ProcessKeyboard(DOWN, deltaTime);
-
 	}
 
 	// glfw: whenever the window size changed (by OS or user resize) this callback function executes
@@ -272,7 +260,7 @@ namespace lightingColors
 
 	// glfw: whenever the mouse moves, this callback is called
 	// -------------------------------------------------------
-	void lightingColors::mouse_callback(GLFWwindow* window, double xpos, double ypos)
+	void mouse_callback(GLFWwindow* window, double xpos, double ypos)
 	{
 		if (firstMouse)
 		{
@@ -292,8 +280,9 @@ namespace lightingColors
 
 	// glfw: whenever the mouse scroll wheel scrolls, this callback is called
 	// ----------------------------------------------------------------------
-	void lightingColors::scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
+	void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 	{
 		camera.ProcessMouseScroll(yoffset);
 	}
+
 }

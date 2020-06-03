@@ -121,6 +121,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\include\glad.c" />
+    <ClCompile Include="basic_lighting_specular.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="cameraExercise.cpp" />
     <ClCompile Include="ColorTriangle.cpp" />

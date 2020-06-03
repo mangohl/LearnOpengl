@@ -10,6 +10,10 @@ namespace lightingColors
 {
 	int lightingColorsProcess();
 }
+namespace basic_lighting_specular 
+{
+	int main();
+}
 int main()
 {
 	int ret = 0;
@@ -17,7 +21,8 @@ int main()
 	//ret = transformProcess();
 	//ret = coordinate_systems_depthProcess();
 	//ret = cameraExerciseProcess();
-	ret = lightingColors::lightingColorsProcess();
+	//ret = lightingColors::lightingColorsProcess();
+	ret = basic_lighting_specular::main();
 
 	return ret;
 }
