@@ -127,7 +127,10 @@
     <ClCompile Include="ColorTriangle.cpp" />
     <ClCompile Include="coordinate_systems_depth.cpp" />
     <ClCompile Include="lighting-colors.cpp" />
+    <ClCompile Include="lighting_maps_diffuse.cpp" />
+    <ClCompile Include="lighting_maps_specular.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="materials.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="texture.cpp" />
     <ClCompile Include="transformation.cpp" />

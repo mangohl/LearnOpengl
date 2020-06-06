@@ -54,6 +54,15 @@
     <ClCompile Include="basic_lighting_specular.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="materials.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lighting_maps_diffuse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lighting_maps_specular.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shader.h">
