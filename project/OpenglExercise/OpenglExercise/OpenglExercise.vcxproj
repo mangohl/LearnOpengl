@@ -129,6 +129,7 @@
     <ClCompile Include="lighting-colors.cpp" />
     <ClCompile Include="lighting_maps_diffuse.cpp" />
     <ClCompile Include="lighting_maps_specular.cpp" />
+    <ClCompile Include="light_casters_directional.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="materials.cpp" />
     <ClCompile Include="Shader.cpp" />

@@ -12,6 +12,7 @@ namespace basic_lighting_specular {int main();}
 namespace material { int main(); }
 namespace lighting_maps_diffuse { int main(); }
 namespace lighting_maps_specular { int main(); }
+namespace light_casters_directional{ int main(); }
 
 int main()
 {
@@ -24,7 +25,8 @@ int main()
 	//ret = basic_lighting_specular::main();
 	//ret = material::main();
 	//ret = lighting_maps_diffuse::main();
-	ret = lighting_maps_specular::main();
+	//ret = lighting_maps_specular::main();
+	ret = light_casters_directional::main();
 
 	return ret;
 }
