@@ -14,6 +14,8 @@ namespace lighting_maps_diffuse { int main(); }
 namespace lighting_maps_specular { int main(); }
 namespace light_casters_directional{ int main(); }
 namespace model_loading { int main(); }
+namespace cubemaps_skybox{int main();}
+namespace cubemaps_environment_mapping { int main(); }
 
 int main()
 {
@@ -29,7 +31,9 @@ int main()
 	//ret = lighting_maps_diffuse::main();
 	//ret = lighting_maps_specular::main();
 	//ret = light_casters_directional::main();
-	ret = model_loading::main();
+	//ret = model_loading::main();
+	//ret = cubemaps_skybox::main();
+	ret = cubemaps_environment_mapping::main();
 	return ret;
 }
 

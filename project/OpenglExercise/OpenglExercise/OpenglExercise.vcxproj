@@ -126,6 +126,8 @@
     <ClCompile Include="cameraExercise.cpp" />
     <ClCompile Include="ColorTriangle.cpp" />
     <ClCompile Include="coordinate_systems_depth.cpp" />
+    <ClCompile Include="cubemaps_environment_mapping.cpp" />
+    <ClCompile Include="cubemaps_skybox.cpp" />
     <ClCompile Include="lighting-colors.cpp" />
     <ClCompile Include="lighting_maps_diffuse.cpp" />
     <ClCompile Include="lighting_maps_specular.cpp" />
