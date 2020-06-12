@@ -12,3 +12,4 @@
 *.log
 *.idb
 glfw3.lib
+!/project/OpenglExercise/OpenglExercise/modelSource

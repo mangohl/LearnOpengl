@@ -265,7 +265,7 @@ namespace cubemaps_environment_mapping {
 			glBindVertexArray(0);
 			glDepthFunc(GL_LESS); // set depth function back to default
 
-								  //model
+			//model
 			ourShader.use();
 
 			// view/projection transformations
