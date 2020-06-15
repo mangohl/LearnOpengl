@@ -16,6 +16,7 @@ namespace light_casters_directional{ int main(); }
 namespace model_loading { int main(); }
 namespace cubemaps_skybox{int main();}
 namespace cubemaps_environment_mapping { int main(); }
+namespace blending_discard { int main(); }
 
 int main()
 {
@@ -33,7 +34,8 @@ int main()
 	//ret = light_casters_directional::main();
 	//ret = model_loading::main();
 	//ret = cubemaps_skybox::main();
-	ret = cubemaps_environment_mapping::main();
+	//ret = cubemaps_environment_mapping::main();
+	ret = blending_discard::main();
 	return ret;
 }
 
