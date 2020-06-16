@@ -17,6 +17,7 @@ namespace model_loading { int main(); }
 namespace cubemaps_skybox{int main();}
 namespace cubemaps_environment_mapping { int main(); }
 namespace blending_discard { int main(); }
+namespace framebuffers { int main(); }
 
 int main()
 {
@@ -35,7 +36,8 @@ int main()
 	//ret = model_loading::main();
 	//ret = cubemaps_skybox::main();
 	//ret = cubemaps_environment_mapping::main();
-	ret = blending_discard::main();
+	//ret = blending_discard::main();
+	ret = framebuffers::main();
 	return ret;
 }
 
