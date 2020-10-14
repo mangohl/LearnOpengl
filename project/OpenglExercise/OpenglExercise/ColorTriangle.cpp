@@ -27,7 +27,7 @@ int colorTriangleProcess()
 #endif
 
 	// glfw window creation
-	// --------------------
+	//创建一个窗口
 	GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
 	if (window == NULL)
 	{
@@ -36,6 +36,8 @@ int colorTriangleProcess()
 		return -1;
 	}
 	glfwMakeContextCurrent(window);
+
+	//设置窗口大小变化回调
 	glfwSetFramebufferSizeCallback(window, colorTriangle::framebuffer_size_callback);
 
 	// glad: load all OpenGL function pointers
@@ -52,6 +54,9 @@ int colorTriangleProcess()
 
 														// set up vertex data (and buffer(s)) and configure vertex attributes
 														// ------------------------------------------------------------------
+	
+	//一行代表一个顶点的所有属性
+	//这个每个顶点有两个属性：顶点坐标和顶点颜色
 	float vertices[] = {
 		// positions         // colors
 		0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,  // bottom right
@@ -63,7 +68,7 @@ int colorTriangleProcess()
 	glGenVertexArrays(1, &VAO);
 	glGenBuffers(1, &VBO);
 	// bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
-	//先绑定顶点数组对象
+	//先绑定顶点数组对象（'VBO包裹器'）
 	glBindVertexArray(VAO);
 
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
@@ -86,7 +91,7 @@ int colorTriangleProcess()
 	while (!glfwWindowShouldClose(window))
 	{
 		// input
-		// -----
+		// 事件处理
 		colorTriangle::processInput(window);
 
 		// render
@@ -95,10 +100,13 @@ int colorTriangleProcess()
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		// render the triangle
+		//glUniform4f之间必须调用该函数
 		ourShader.use();
 
 		float timeValue = glfwGetTime();
 		float greenValue = (sin(timeValue) / 2.0f) + 0.5f;
+
+		//获取着色器中varColor的位置并赋值
 		int vertexColorLocation = glGetUniformLocation(ourShader.ID, "varColor");
 		//ourShader.use();
 		glUniform4f(vertexColorLocation, greenValue, greenValue, greenValue, 1.0f);
@@ -107,10 +115,15 @@ int colorTriangleProcess()
 		glDrawArrays(GL_TRIANGLES, 0, 3);
 
 		// glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
-		// -------------------------------------------------------------------------------
+		// 交换缓冲：暂时理解为两个缓冲轮流工作
 		glfwSwapBuffers(window);
+
+		//让glfw窗口响应鼠标、键盘事件
 		glfwPollEvents();
+
+		
 	}
+
 
 	// optional: de-allocate all resources once they've outlived their purpose:
 	// ------------------------------------------------------------------------

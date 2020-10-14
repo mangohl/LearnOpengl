@@ -4,6 +4,7 @@ out vec4 FragColor;
 in vec3 ourColor;
 in vec2 TexCoord;
 
+//这里简单理解就是通过ourTexture即可使用到texture.cpp程序中的texture对象。
 uniform sampler2D ourTexture;
 
 void main()

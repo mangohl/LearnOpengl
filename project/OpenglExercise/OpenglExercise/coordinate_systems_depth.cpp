@@ -58,7 +58,7 @@ int coordinate_systems_depthProcess()
 	// build and compile our shader zprogram
 	Shader ourShader("6.2.coordinate_systems.vs", "6.2.coordinate_systems.fs");
 
-	//设置顶点数据：顶点位置属性和纹理位置属性；正方体6*4个点
+	//设置顶点数据：顶点位置属性和纹理位置属性；正方体6（？）*4个点
 	float vertices[] = {
 		-0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
 		0.5f, -0.5f, -0.5f,  1.0f, 0.0f,
@@ -247,7 +247,7 @@ int coordinate_systems_depthProcess()
 		// create transformations
 		glm::mat4 view = glm::mat4(1.0f); // make sure to initialize matrix to identity matrix first
 		glm::mat4 projection = glm::mat4(1.0f);
-		projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
+		projection = glm::perspective(glm::radians(60.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
 		view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
 		// pass transformation matrices to the shader
 		ourShader.setMat4("projection", projection); // note: currently we set the projection matrix each frame, but since the projection matrix rarely changes it's often best practice to set it outside the main loop only once.
@@ -262,7 +262,7 @@ int coordinate_systems_depthProcess()
 			// calculate the model matrix for each object and pass it to shader before drawing
 			float angle = 20.0f * i;
 			glm::mat4 model = glm::mat4(1.0f);
-			//模型矩阵先移动后旋转，若调换顺序则结果不同，有两个原因可以解释：1是矩阵运算不满足交换律，2是每次变换后坐标系都会改变
+			//模型矩阵先移动后旋转
 			model = glm::translate(model, cubePositions[i]);
 			model = glm::rotate(model, (float)glfwGetTime(), glm::vec3(1.0f, 0.3f, 0.5f));
 			

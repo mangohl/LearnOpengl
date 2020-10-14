@@ -19,11 +19,12 @@ enum Camera_Movement {
 };
 
 // Default camera values
-const float YAW = -90.0f;
-const float PITCH = 0.0f;
-const float SPEED = 2.5f;
+const float YAW = -90.0f;//y轴旋转 偏航角
+const float PITCH = 0.0f; //x轴旋转 俯仰角
+
+const float SPEED = 2.5f; 
 const float SENSITIVITY = 0.1f;
-const float ZOOM = 45.0f;
+const float ZOOM = 45.0f;//（作用域透视矩阵的fov来产生放大缩小的作者）
 
 
 // An abstract camera class that processes input and calculates the corresponding Euler Angles, Vectors and Matrices for use in OpenGL
@@ -31,10 +32,12 @@ class Camera
 {
 public:
 	// camera Attributes
-	glm::vec3 Position;//摄像机位置
+	glm::vec3 Position;//摄像机位置（都是世界空间而言）
+
 	glm::vec3 Front;//摄像机指向向量,保持指向z轴负方向(z值保持负数)的单位向量（模为1）
-	glm::vec3 Up;//摄像机上轴
-	glm::vec3 Right;//摄像机右轴
+	glm::vec3 Up;//摄像机上轴 单位向量
+	glm::vec3 Right;//摄像机右轴 单位向量
+
 	glm::vec3 WorldUp;
 	// euler Angles
 	float Yaw;
@@ -44,7 +47,7 @@ public:
 	float MouseSensitivity;
 	float Zoom;
 
-	//试图矩阵
+	//视图矩阵
 	glm::mat4 m_view;
 
 	// constructor with vectors
@@ -104,6 +107,7 @@ public:
 		}
 	}
 
+	//鼠标移动时 计算Yaw值和Pithc值
 	// processes input received from a mouse input system. Expects the offset value in both the x and y direction.
 	void ProcessMouseMovement(float xoffset, float yoffset, GLboolean constrainPitch = true)
 	{
@@ -138,6 +142,7 @@ public:
 
 private:
 	// calculates the front vector from the Camera's (updated) Euler Angles
+	//旋转时改变右轴和指向Front向量和Up 三个向量的值
 	void updateCameraVectors()
 	{
 		// calculate the new Front vector

@@ -107,6 +107,7 @@ int textureProcess()
 	unsigned char *data = stbi_load("../OpenglExercise/container.jpg", &width, &height, &nrChannels, 0);
 	if (data)
 	{
+		//将data赋值到刚刚绑定的纹理对象texture
 		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
 		glGenerateMipmap(GL_TEXTURE_2D);
 	}
@@ -131,7 +132,8 @@ int textureProcess()
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		// bind Texture
-		glBindTexture(GL_TEXTURE_2D, texture);
+		//也可以不绑定
+		//glBindTexture(GL_TEXTURE_2D, texture);
 
 		// render container
 		ourShader.use();

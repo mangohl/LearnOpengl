@@ -153,7 +153,7 @@ int transformProcess()
 
 
 
-	//利用uniform变量 供片段着色器使用
+	//利用uniform变量 供片段着色器使用，（没有使用glGetUniformLocation）。
 	ourShader.use();
 	ourShader.setInt("texture1", 0);
 	ourShader.setInt("texture2", 1);
@@ -181,9 +181,10 @@ int transformProcess()
 		glBindTexture(GL_TEXTURE_2D, texture2);
 
 		// 创建变换矩阵
+		//变换顺序不一样 结果往往不同：矩阵乘法没有交换律；画图也能看出
 		glm::mat4 transform = glm::mat4(1.0f); // make sure to initialize matrix to identity matrix first
 		transform = glm::translate(transform, glm::vec3(0.5f, -0.5f, 0.0f));
-		transform = glm::rotate(transform, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
+		transform = glm::rotate(transform, (float)glfwGetTime(), glm::vec3(0.0f, .0f, 1.0f));
 
 		// 利用uniform变量 令顶点着色器可以使用变换矩阵
 		ourShader.use();
@@ -196,7 +197,7 @@ int transformProcess()
 
 	
 		//交换缓冲使得渲染立即生效
-		//开始事件循环
+		//
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 	}

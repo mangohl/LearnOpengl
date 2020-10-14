@@ -22,11 +22,11 @@ namespace framebuffers { int main(); }
 int main()
 {
 	int ret = 0;
-    // ret = triangleProcess();
-
+    //ret = colorTriangleProcess();
+	//ret = textureProcess();
 	//ret = transformProcess();
 	//ret = coordinate_systems_depthProcess();
-	//ret = cameraExerciseProcess();
+	ret = cameraExerciseProcess();
 	//ret = lightingColors::lightingColorsProcess();
 	//ret = basic_lighting_specular::main();
 	//ret = material::main();
@@ -37,7 +37,7 @@ int main()
 	//ret = cubemaps_skybox::main();
 	//ret = cubemaps_environment_mapping::main();
 	//ret = blending_discard::main();
-	ret = framebuffers::main();
+	//ret = framebuffers::main();
 	return ret;
 }
 
