@@ -184,7 +184,7 @@ int transformProcess()
 		//变换顺序不一样 结果往往不同：矩阵乘法没有交换律；画图也能看出
 		glm::mat4 transform = glm::mat4(1.0f); // make sure to initialize matrix to identity matrix first
 		transform = glm::translate(transform, glm::vec3(0.5f, -0.5f, 0.0f));
-		transform = glm::rotate(transform, (float)glfwGetTime(), glm::vec3(0.0f, .0f, 1.0f));
+		transform = glm::rotate(transform, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
 
 		// 利用uniform变量 令顶点着色器可以使用变换矩阵
 		ourShader.use();

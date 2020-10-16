@@ -40,6 +40,7 @@ public:
 	}
 
 	// draws the model, and thus all its meshes
+	//绘制所有的mesh
 	void Draw(Shader &shader)
 	{
 		for (unsigned int i = 0; i < meshes.size(); i++)
@@ -48,6 +49,7 @@ public:
 
 private:
 	// loads a model with supported ASSIMP extensions from file and stores the resulting meshes in the meshes vector.
+	//获取model中所有的mesh
 	void loadModel(string const &path)
 	{
 		// read file via ASSIMP
@@ -67,6 +69,7 @@ private:
 	}
 
 	// processes a node in a recursive fashion. Processes each individual mesh located at the node and repeats this process on its children nodes (if any).
+	//获取node及所有子node的mesh
 	void processNode(aiNode *node, const aiScene *scene)
 	{
 		// process each mesh located at the current node
@@ -85,6 +88,7 @@ private:
 
 	}
 
+	//构造一个mesh对象
 	Mesh processMesh(aiMesh *mesh, const aiScene *scene)
 	{
 		// data to fill

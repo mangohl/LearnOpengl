@@ -18,6 +18,7 @@ namespace light_casters_spot { int main(); }
 namespace light_casters_spot_soft { int main(); }
 namespace multiple_lights { int main(); }
 namespace model_loading { int main(); }
+namespace model_loading_light { int main(); }
 namespace cubemaps_skybox{int main();}
 namespace cubemaps_environment_mapping { int main(); }
 namespace blending_discard { int main(); }
@@ -40,8 +41,9 @@ int main()
 	//ret = light_casters_point::main();
 	//ret = light_casters_spot::main();
 	//ret = light_casters_spot_soft::main();
-	ret = multiple_lights::main();
+	//ret = multiple_lights::main();
 	//ret = model_loading::main();
+	ret = model_loading_light::main();
 	//ret = cubemaps_skybox::main();
 	//ret = cubemaps_environment_mapping::main();
 	//ret = blending_discard::main();

@@ -141,6 +141,7 @@
     <ClCompile Include="materials.cpp" />
     <ClCompile Include="model.cpp" />
     <ClCompile Include="model_loading.cpp" />
+    <ClCompile Include="model_loading_light.cpp" />
     <ClCompile Include="multiple_lights.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="texture.cpp" />

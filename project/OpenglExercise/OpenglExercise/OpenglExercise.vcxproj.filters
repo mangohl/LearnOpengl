@@ -96,6 +96,9 @@
     <ClCompile Include="multiple_lights.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="model_loading_light.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shader.h">
