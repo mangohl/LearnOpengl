@@ -3,16 +3,20 @@ out vec4 FragColor;
 
 struct Material {
     sampler2D diffuse;
-    vec3 specular;    
-    float shininess;
+    sampler2D specular;    
+    float shininess;//值越小 镜面强度越大
 }; 
 
 struct Light {
-    vec3 position;
-
+    vec3 position;  
+  
     vec3 ambient;
     vec3 diffuse;
     vec3 specular;
+	
+    float constant;
+    float linear;
+    float quadratic;
 };
 
 in vec3 FragPos;  
@@ -23,26 +27,35 @@ uniform vec3 viewPos;
 uniform Material material;
 uniform Light light;
 
-//上一节中每个片段的3中分量都是一样的；这一节通过贴图达到每个片段的diffuse分量都不一样的效果，光照分量依然是指定的，物体的分量由纹理决定（texture函数得到一个片段的颜色）
+
+//平行光的特点是光向量都是一样的
+//点光源的特点是光向量是不一样的（朝所有方向放光） 且 会衰减（离光源远的很暗）  类似灯泡和火把
+
+//将环境分量、漫反射分量和镜面分量都乘上同一个衰减因子
 void main()
 {
     // ambient
-	//最终输出的环境光分量 = 光源的的环境光分量 * 物体的纹理
     vec3 ambient = light.ambient * texture(material.diffuse, TexCoords).rgb;
   	
     // diffuse 
     vec3 norm = normalize(Normal);
     vec3 lightDir = normalize(light.position - FragPos);
     float diff = max(dot(norm, lightDir), 0.0);
-	//最终输出的漫反射分量 = 光源的漫反射分量 * 漫反射强度 * 物体的纹理
     vec3 diffuse = light.diffuse * diff * texture(material.diffuse, TexCoords).rgb;  
     
     // specular
     vec3 viewDir = normalize(viewPos - FragPos);
     vec3 reflectDir = reflect(-lightDir, norm);  
     float spec = pow(max(dot(viewDir, reflectDir), 0.0), material.shininess);
-	//最红输出的镜面反射分量 = 光源的镜面反射分量 * 镜面反射强度 * 物体的镜面反射分量（不同片段为同一值）
-    vec3 specular = light.specular * (spec * material.specular);  
+    vec3 specular = light.specular * spec * texture(material.specular, TexCoords).rgb;  
+    
+    // attenuation
+    float distance    = length(light.position - FragPos);
+    float attenuation = 1.0 / (light.constant + light.linear * distance + light.quadratic * (distance * distance));    
+
+    ambient  *= attenuation;  
+    diffuse   *= attenuation;
+    specular *= attenuation;   
         
     vec3 result = ambient + diffuse + specular;
     FragColor = vec4(result, 1.0);

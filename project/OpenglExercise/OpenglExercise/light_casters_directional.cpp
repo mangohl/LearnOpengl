@@ -197,7 +197,7 @@ namespace light_casters_directional {
 
 			// be sure to activate shader when setting uniforms/drawing objects
 			lightingShader.use();
-			lightingShader.setVec3("light.direction", -0.2f, -1.0f, -0.3f);
+			lightingShader.setVec3("light.direction", -0.0f, -0.0f, -0.3f);
 			lightingShader.setVec3("viewPos", camera.Position);
 
 			// light properties

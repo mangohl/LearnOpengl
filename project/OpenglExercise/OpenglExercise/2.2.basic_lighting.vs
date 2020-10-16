@@ -13,9 +13,12 @@ uniform mat4 projection;
 
 void main()
 {
+	//片段的位置使用世界空间的坐标
     FragPos = vec3(model * vec4(aPos, 1.0));
-	//transpose(inverse(model))得到法线矩阵；用以把法向量转换为世界空间中的法向量；这里没有直接使用model矩阵
+	//transpose(inverse(model))得到法线矩阵；用以把法向量转换为世界空间中的法向量；这里不能简单的乘上model矩阵
     Normal = mat3(transpose(inverse(model))) * aNormal;  
+	
+	
     //顶点位置做变换：做到大小、位置、旋转、摄像机、透视效果
     gl_Position = projection * view * vec4(FragPos, 1.0);
 }

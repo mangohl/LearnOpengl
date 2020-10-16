@@ -81,11 +81,12 @@ namespace lightingColors
 		// ------------------------------------
 		//编译、链接两类着色器
 		Shader lightingShader("1.colors.vs", "1.colors.fs");
-		Shader lightCubeShader("1.light_cube.vs", "1.light_cube.fs");
+		Shader lightCubeShader("1.light_cube.vs", "1.light_cube.fs");//光源正方体着色器
 
 		// set up vertex data (and buffer(s)) and configure vertex attributes
 		// ------------------------------------------------------------------
 		//一份顶点供两个正方体使用
+		//一个面由两个三角形构成；即6个点
 		float vertices[] = {
 			-0.5f, -0.5f, -0.5f,
 			0.5f, -0.5f, -0.5f,
@@ -131,22 +132,19 @@ namespace lightingColors
 		};
 		// first, configure the cube's VAO (and VBO)
 		unsigned int VBO, cubeVAO;
-		//先生成一个VAO
 		glGenVertexArrays(1, &cubeVAO);
-		//生产一个顶点缓冲对象
 		glGenBuffers(1, &VBO);
-		//绑定顶点缓冲对象类型
-		glBindBuffer(GL_ARRAY_BUFFER, VBO);
-		//绑定顶点缓冲对象数据
-		glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-		//绑定到顶点数组对象
+	//cubeVAO start	
 		glBindVertexArray(cubeVAO);
+
+		glBindBuffer(GL_ARRAY_BUFFER, VBO);
+		glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
 		// position attribute
 		//声明顶点位置属性 让立方体顶点着色器能够访问到
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 		glEnableVertexAttribArray(0);
-
+    //cubeVAO end
 
 		// second, configure the light's VAO (VBO stays the same; the vertices are the same for the light object which is also a 3D cube)
 		//设置光照顶点数组对象

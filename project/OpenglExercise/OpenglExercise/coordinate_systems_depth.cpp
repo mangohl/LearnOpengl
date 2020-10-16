@@ -215,9 +215,9 @@ int coordinate_systems_depthProcess()
 		
 		// bind textures on corresponding texture units
 		glActiveTexture(GL_TEXTURE0);
-		glBindTexture(GL_TEXTURE_2D, texture1);
+		//glBindTexture(GL_TEXTURE_2D, texture1);
 		glActiveTexture(GL_TEXTURE1);
-		glBindTexture(GL_TEXTURE_2D, texture2);
+		//glBindTexture(GL_TEXTURE_2D, texture2);
 
 
 		// activate shader

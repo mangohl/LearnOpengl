@@ -23,6 +23,12 @@ uniform vec3 viewPos;
 uniform Material material;
 uniform Light light;
 
+
+//之前的result1 = lightColor * objectColor;  即每一片段的颜色都是一样的
+//之前的result2 = {(diff + spec + amb)*lightColor } * objectColor;  等价于 {环境光分量 + 漫反射分量 + 镜面分量}  //由于每一片段的diff,spec,amb的强度值都不同，所以每个片段的输出颜色也不同   ;模拟了光的漫反射和镜面效果
+//现在的result3 =  指定的分量1*强度值1 + 指定的分量2*强度值2 + 指定的分量3*强度值3
+//不同之处在于分量的计算，而这里的分量值是手动设置的。这里就有个问题 就是每个片段的分量都是一样的，只是强度不同
+
 void main()
 {
     // ambient

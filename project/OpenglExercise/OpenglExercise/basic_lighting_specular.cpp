@@ -30,7 +30,7 @@ namespace basic_lighting_specular {
 	float lastFrame = 0.0f;
 
 	// lighting 光源立方体中心位置
-	glm::vec3 lightPos(0.0f, 0.0f, 2.0f);
+	glm::vec3 lightPos(0.0f, 0.0f, 6.0f);
 
 	int main()
 	{
@@ -130,10 +130,11 @@ namespace basic_lighting_specular {
 		glGenVertexArrays(1, &cubeVAO);
 		glGenBuffers(1, &VBO);
 
-		glBindBuffer(GL_ARRAY_BUFFER, VBO);
-		glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
 		glBindVertexArray(cubeVAO);
+
+		glBindBuffer(GL_ARRAY_BUFFER, VBO);
+		glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
 		// position attribute
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);

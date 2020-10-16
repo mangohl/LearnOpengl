@@ -8,7 +8,7 @@ struct Material {
 }; 
 
 struct Light {
-    //vec3 position;//和4.2fs的不同之处：每个片段使用相同的光源方向
+    //vec3 position;//和之前fs的不同之处：每个片段使用相同的光源方向
     vec3 direction;
 
     vec3 ambient;
@@ -24,6 +24,9 @@ uniform vec3 viewPos;
 uniform Material material;
 uniform Light light;
 
+//平行光的特点是每个片段的光向量都是一样的
+//ligntDir相对上一节不同
+
 void main()
 {
     // ambient
@@ -32,7 +35,7 @@ void main()
     // diffuse 
     vec3 norm = normalize(Normal);
     // vec3 lightDir = normalize(light.position - FragPos);
-    vec3 lightDir = normalize(-light.direction);  
+    vec3 lightDir = normalize(-light.direction);  //之前每个片段的光源方向都是不一样的，现在都是一样的
     float diff = max(dot(norm, lightDir), 0.0);
     vec3 diffuse = light.diffuse * diff * texture(material.diffuse, TexCoords).rgb;  
     

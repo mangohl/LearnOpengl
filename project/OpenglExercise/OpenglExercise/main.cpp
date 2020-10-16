@@ -13,6 +13,10 @@ namespace material { int main(); }
 namespace lighting_maps_diffuse { int main(); }
 namespace lighting_maps_specular { int main(); }
 namespace light_casters_directional{ int main(); }
+namespace light_casters_point { int main(); }
+namespace light_casters_spot { int main(); }
+namespace light_casters_spot_soft { int main(); }
+namespace multiple_lights { int main(); }
 namespace model_loading { int main(); }
 namespace cubemaps_skybox{int main();}
 namespace cubemaps_environment_mapping { int main(); }
@@ -26,13 +30,17 @@ int main()
 	//ret = textureProcess();
 	//ret = transformProcess();
 	//ret = coordinate_systems_depthProcess();
-	ret = cameraExerciseProcess();
+	//ret = cameraExerciseProcess();
 	//ret = lightingColors::lightingColorsProcess();
 	//ret = basic_lighting_specular::main();
 	//ret = material::main();
 	//ret = lighting_maps_diffuse::main();
 	//ret = lighting_maps_specular::main();
 	//ret = light_casters_directional::main();
+	//ret = light_casters_point::main();
+	//ret = light_casters_spot::main();
+	//ret = light_casters_spot_soft::main();
+	ret = multiple_lights::main();
 	//ret = model_loading::main();
 	//ret = cubemaps_skybox::main();
 	//ret = cubemaps_environment_mapping::main();
