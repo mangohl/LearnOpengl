@@ -11,6 +11,7 @@
 #include "model.h"
 
 #include <iostream>
+//
 namespace model_loading_light {
 	void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 	void mouse_callback(GLFWwindow* window, double xpos, double ypos);
@@ -247,7 +248,6 @@ namespace model_loading_light {
 			ourShader.setMat4("view", view);
 
 			auto view2 = glm::rotate(view, (float)glfwGetTime(), glm::vec3(0.0f, 1.0f, 0.0f));
-	
 			auto v4 = view2 * glm::vec4(lightCubePos, 0.0);
 
 			ourShader.setVec3("pointLights[0].position", glm::vec3(v4.x, v4.y, v4.z));

@@ -123,12 +123,14 @@
     <ClCompile Include="..\..\include\glad.c" />
     <ClCompile Include="basic_lighting_specular.cpp" />
     <ClCompile Include="blending_discard.cpp" />
+    <ClCompile Include="blending_sorted.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="cameraExercise.cpp" />
     <ClCompile Include="ColorTriangle.cpp" />
     <ClCompile Include="coordinate_systems_depth.cpp" />
     <ClCompile Include="cubemaps_environment_mapping.cpp" />
     <ClCompile Include="cubemaps_skybox.cpp" />
+    <ClCompile Include="depth_testing_view.cpp" />
     <ClCompile Include="framebuffers.cpp" />
     <ClCompile Include="lighting-colors.cpp" />
     <ClCompile Include="lighting_maps_diffuse.cpp" />
@@ -144,6 +146,7 @@
     <ClCompile Include="model_loading_light.cpp" />
     <ClCompile Include="multiple_lights.cpp" />
     <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="stencil_testing.cpp" />
     <ClCompile Include="texture.cpp" />
     <ClCompile Include="transformation.cpp" />
     <ClCompile Include="triangle.cpp" />

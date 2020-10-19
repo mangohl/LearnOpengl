@@ -19,9 +19,14 @@ namespace light_casters_spot_soft { int main(); }
 namespace multiple_lights { int main(); }
 namespace model_loading { int main(); }
 namespace model_loading_light { int main(); }
+
+namespace depth_testing_view { int main(); }
+namespace stencil_testing { int main(); }
+namespace blending_discard { int main(); }
+namespace blending_sorted { int main(); }
+
 namespace cubemaps_skybox{int main();}
 namespace cubemaps_environment_mapping { int main(); }
-namespace blending_discard { int main(); }
 namespace framebuffers { int main(); }
 
 int main()
@@ -43,10 +48,15 @@ int main()
 	//ret = light_casters_spot_soft::main();
 	//ret = multiple_lights::main();
 	//ret = model_loading::main();
-	ret = model_loading_light::main();
+	//ret = model_loading_light::main();
+
+	//ret = depth_testing_view::main();
+	//ret = stencil_testing::main();
+	//ret = blending_discard::main();
+	ret = blending_sorted::main();
+
 	//ret = cubemaps_skybox::main();
 	//ret = cubemaps_environment_mapping::main();
-	//ret = blending_discard::main();
 	//ret = framebuffers::main();
 	return ret;
 }

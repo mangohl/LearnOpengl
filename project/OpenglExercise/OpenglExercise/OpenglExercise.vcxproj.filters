@@ -99,6 +99,15 @@
     <ClCompile Include="model_loading_light.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="depth_testing_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stencil_testing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="blending_sorted.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shader.h">
